@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Raghuvanshi | CTO & 3D/AI Architect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/react.svg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader">Loading Neural Core...</div>
+    </div>
+    <canvas id="bg-canvas"></canvas>
+    
+    <div id="content-overlay">
+        <nav>
+            <div class="logo">M.R.</div>
+            <div class="links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <header id="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Mayank Raghuvanshi">Mayank Raghuvanshi</h1>
+                <h2>Lead Engineer <br> <span class="highlight">Tech Lead / CTO</span></h2>
+                <p class="tagline">Bridging the gap between cutting-edge AI research and production-grade AR/VR experiences.</p>
+                <div class="cta-group">
+                    <a href="assets/Mayank Raghuvanshi Lead Resume AR VR ML WEB.pdf" target="_blank" class="btn primary">Download Resume</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <!-- 3D container is now handled by canvas background positioning or separate canvas -->
+        </header>
+
+        <section id="about">
+            <div class="section-header">
+                <span>01.</span>
+                <h3>About Me</h3>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I am a <strong>CTO-level technologist</strong> with over 6 years of experience architecting scalable, AI-driven full-stack products.</p>
+                    <p>My expertise lies in building complex <strong>AI/ML pipelines</strong> (TensorFlow, PyTorch) and delivering immersive <strong>3D/AR/VR experiences</strong> (Three.js, WebXR). I don't just write code; I design systems that scale, lead technical teams, and drive product vision from concept to market delivery.</p>
+                    <p>Currently focused on the intersection of <strong>Generative AI</strong> and <strong>Spatial Computing</strong>.</p>
+                    <div class="skills-list">
+                        <ul>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React / Redux</li>
+                            <li>Node.js / GraphQL</li>
+                            <li>Three.js / WebGL</li>
+                        </ul>
+                        <ul>
+                            <li>Python / PyTorch</li>
+                            <li>AWS Serverless / MLOps</li>
+                            <li>Docker / CI/CD</li>
+                            <li>AR / VR / WebXR</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="frame">
+                        <div class="img-wrapper">
+                           <img src="assets/profile.png" alt="Mayank Raghuvanshi" class="profile-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="section-header">
+                <span>02.</span>
+                <h3>Experience</h3>
+            </div>
+            <div class="jobs-container">
+                <div class="job-list">
+                    <button class="job-btn active" data-id="job1">Yash Tech</button>
+                    <button class="job-btn" data-id="job2">Vector3</button>
+                    <button class="job-btn" data-id="job3">Future IT</button>
+                    <button class="job-btn" data-id="job4">Hexateron</button>
+                    <button class="job-btn" data-id="job5">Trendy IT</button>
+                </div>
+                
+                <div class="job-detail active" id="job1">
+                    <h4>Senior Full Stack Engineer <span class="company">@ Yash Technologies</span></h4>
+                    <p class="range">Dec 2024 - Present</p>
+                    <ul>
+                        <li><strong>Architected SaaS Platform:</strong> Led the frontend architecture and microservices integration for a healthcare platform serving 50K+ users.</li>
+                        <li><strong>AI Integration:</strong> Implemented TensorFlow-based patient risk models and MLOps pipelines using SageMaker.</li>
+                        <li><strong>Cloud Native:</strong> Orchestrated serverless ecosystems (Lambda, API Gateway) and robust CI/CD pipelines.</li>
+                    </ul>
+                </div>
+
+                <div class="job-detail" id="job2">
+                    <h4>Full Stack Engineer <span class="company">@ Vector3 Technologies</span></h4>
+                    <p class="range">Aug 2024 - Oct 2024</p>
+                    <ul>
+                        <li><strong>3D/AR Engine:</strong> Built a custom 3D asset pipeline using Three.js and Babylon.js.</li>
+                        <li><strong>Mobile Optimization:</strong> Achieved 60fps on mobile via mesh compression (Draco) and LOD systems.</li>
+                        <li><strong>Infrastructure:</strong> Deployed Lambda-based 3D asset serving network with CloudFront caching.</li>
+                    </ul>
+                </div>
+
+                <div class="job-detail" id="job3">
+                    <h4>Full Stack Engineer <span class="company">@ Future IT Solutions</span></h4>
+                    <p class="range">Dec 2023 - Aug 2024</p>
+                    <ul>
+                        <li><strong>Automation:</strong> Created Blender automation pipelines to process thousands of 3D assets.</li>
+                        <li><strong>Smart Placement:</strong> Developed PyTorch models for intelligent furniture placement in 3D scenes.</li>
+                        <li><strong>Performance:</strong> Reduced load times by 30% through advanced compression algorithms.</li>
+                    </ul>
+                </div>
+
+                <div class="job-detail" id="job4">
+                    <h4>Frontend Engineer <span class="company">@ Hexateron.IO</span></h4>
+                    <p class="range">Jan 2023 - Jan 2024</p>
+                    <ul>
+                        <li>Built interactive 3D dashboards utilizing Plotly and D3.js for complex data analytics.</li>
+                        <li>Integrated client-side ML inference for real-time data processing in the browser.</li>
+                    </ul>
+                </div>
+
+                <div class="job-detail" id="job5">
+                    <h4>Frontend Associate <span class="company">@ Trendy IT Solutions</span></h4>
+                    <p class="range">Aug 2019 - Jan 2023</p>
+                    <ul>
+                        <li>Fast-tracked promotion from Intern to Associate Engineer.</li>
+                        <li>Built secure BFSI platforms for major banking clients (HDFC, Kotak).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="section-header">
+                <span>03.</span>
+                <h3>Technical Work</h3>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <p class="project-overline">Featured Project</p>
+                        <h4 class="project-title">AI Interior Design Platform</h4>
+                        <div class="project-desc">
+                            <p>A cutting-edge platform utilizing <strong>Text-to-3D</strong> and <strong>Image-to-3D</strong> generation (PyTorch). Features real-time AR visualization and serverless inference scaling.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Three.js</li>
+                            <li>React</li>
+                            <li>PyTorch</li>
+                            <li>WebXR</li>
+                            <li>AWS SageMaker</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <p class="project-overline">Healthcare Tech</p>
+                        <h4 class="project-title">MedPortal (HIPAA Compliant)</h4>
+                        <div class="project-desc">
+                            <p>Secure patient management system processing data for 50K+ users. Implements <strong>patient risk prediction models</strong> via TensorFlow and secure auth flows.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>React</li>
+                            <li>Redux</li>
+                            <li>TensorFlow</li>
+                            <li>AWS Cognito</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <p class="project-overline">Real-Time Systems</p>
+                        <h4 class="project-title">ChatX & FinEdge</h4>
+                        <div class="project-desc">
+                            <p>High-performance systems: <strong>Sub-100ms latency</strong> messaging and ML-driven financial trend prediction with live D3.js visualization.</p>
+                        </div>
+                        <ul class="project-tech">
+                            <li>Node.js/WebSockets</li>
+                            <li>D3.js</li>
+                            <li>AWS Lambda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="section-header">
+                <span>04.</span>
+                <h3>What's Next?</h3>
+            </div>
+            <h2 class="title">Let's Build the Future</h2>
+            <p class="contact-text">
+                I'm currently open to leadership roles where I can leverage my experience in AI, 3D, and Scalable Architecture.
+            </p>
+            <a href="mailto:mayanksr02@gmail.com" class="btn primary">Say Hello</a>
+            <div class="socials">
+                <a href="https://github.com/msr157" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/mayanksr" target="_blank">LinkedIn</a>
+            </div>
+        </section>
+        
+        <footer>
+            <p>Designed & Built by Mayank Raghuvanshi | Powered by WebGL</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
